@@ -1,12 +1,28 @@
-import React from 'react'
-function Table( Name ){
-    
-    console.log("test Table :",Name)
-    return(
-        <div>
-            <h1>Table</h1>
-        </div>
-    )
+import React from 'react';
+
+function Table({ data }) {
+   
+  return (
+    <div className="table">
+      <h2>Data Table</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Job</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((item, index) => (
+            <tr key={index}>
+              <td>{item.name}</td>
+              <td>{item.job}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 export default Table;

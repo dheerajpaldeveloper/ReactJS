@@ -1,38 +1,38 @@
 import { useState } from "react";
 
+function Form({ addData }) { 
 
+    const [name, setName] = useState(''); 
+    const [job, setJob] = useState('');   
 
-function Form( props ){
-    console.log(props)
+  function submitData() {  
+    setName(name) ;
+    setJob(job) ;
 
-    const [name, setName]= useState('ravi-123');
-    const [job, setJob] = useState();
+    addData({ name, job }); 
+  }
 
-   
-    function submitData() {
-        
-        const Name = document.getElementById('Name').value;
-        const Job = document.getElementById('Job').value;
+  return (
+    <div className="mainForm">
+      <h1>Add New</h1>
+      <p>Name</p>
+      <input 
+        type="text" 
+        id="Name"
+        value={name} 
+        onChange={(e)=>setName(e.target.value)}
 
-        props.Name('Ravi');
-            
-
-             
-    }
-
-    return(
-        <div className="mainForm">
-            <h1>Add New</h1>
-            <p>Name</p>
-            <input type="text" id="Name" />
-            <p>Job</p>
-            <input type="text" id="Job" />
-
-            <button onClick={submitData}>Submit</button>
-
-        </div>
-    )
+      />
+      <p>Job</p>
+      <input 
+        type="text" 
+        id="Job" 
+        value={job}
+        onChange={(e)=>setJob(e.target.value)}
+      />
+      <button onClick={submitData}>Submit</button>
+    </div>
+  );
 }
 
 export default Form;
-

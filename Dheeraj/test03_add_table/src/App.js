@@ -1,28 +1,20 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 import Form from './components/form';
 import Table from './components/table';
 
-
 function App() {
-  let Name ='Dheeraj'
-  let Job ='developer'
-  
-  this.state = {
-    message: "initial message"
+  const [formData, setFormData] = useState([]);
+
+  const addData = (data) => {
+    console.log("test app.js",data)
+    setFormData([formData, data]); 
   };
-
-  newMessage = (newMessage) => {
-    this.setState({
-      message: newMessage
-    });
-  }
-
 
   return (
     <div className="App">
-      <Form newMessage={ this.newMessage } Job={Job} />
-      <Table Name={Name} Job={Job} />
+      <Form addData= {addData} />
+      <Table data= {formData} />
     </div>
   );
 }
