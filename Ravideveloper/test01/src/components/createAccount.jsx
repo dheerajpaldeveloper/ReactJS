@@ -9,10 +9,12 @@ export const CreateAccount = () => {
     let length = e.target.value.length
     setRangeValue(length)
     if(length == 3 ){
-      setstrengthValue("medium")
+      setstrengthValue("Medium")
     }
     if(length == 6){
-      setstrengthValue("strong")
+      setstrengthValue("Strong")
+    }if(length <3){
+      setstrengthValue("Weak")
     }
   }
 
