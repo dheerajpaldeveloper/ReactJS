@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  margin: 0 20% 0 20%;
+}
+.App .mainForm{
+  
 }
 
 .App-logo {
@@ -35,4 +39,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.mainForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 5px;
+}
+.mainForm input{
+  width: 100%;
+  max-width: 100%;
 }
