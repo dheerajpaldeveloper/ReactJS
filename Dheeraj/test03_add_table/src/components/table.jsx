@@ -1,11 +1,12 @@
 import React from 'react';
 
 function Table({ data }) {
+    console.log("test 5",data)
    
   return (
     <div className="table">
       <h2>Data Table</h2>
-      <table border="1">
+      {/* <table border="1">
         <thead>
           <tr>
             <th>Name</th>
@@ -20,7 +21,7 @@ function Table({ data }) {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 }
