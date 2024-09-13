@@ -1,0 +1,19 @@
+.App{
+  .navbar{
+    background-color: burlywood;
+    padding: 10px;  
+  }
+  .product-list{
+    padding: 50px;
+    margin: 20px;
+  }
+
+  .product-span{
+    padding: 5px;
+    background-color: gray;
+  }
+  .product-main{
+    padding: 10px;
+  }
+
+}

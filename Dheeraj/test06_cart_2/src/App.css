@@ -1,0 +1,25 @@
+.App {
+  text-align: start;
+  .navbar-main{
+    padding: 20px;
+    background-color: cadetblue;
+  }
+
+  .product-list-main{
+    padding: 20px;
+
+  }
+  .product-main{
+    display: flex;
+    column-gap: 20px;
+  }
+  .product-name-price{
+    width: 20%;
+  }
+  .btn-minus{
+    background-color: lightcoral;
+  }
+  .btn-plus{
+    background-color: greenyellow;
+  }
+}
